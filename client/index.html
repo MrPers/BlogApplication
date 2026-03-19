@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Board</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="shell simple-row">
+      <div>
+        <p class="eyebrow">Blog Application</p>
+        <h1>Recent Posts</h1>
+      </div>
+      <nav class="simple-row nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./auth.html">Login</a>
+        <a href="./dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="shell stack-lg">
+      <section class="panel stack-md">
+        <div class="simple-row wrap space-between">
+          <div>
+            <h2>All posts</h2>
+            <p class="muted">Filter posts by category and read the latest updates.</p>
+          </div>
+          <p id="session-badge" class="badge hidden">Logged in</p>
+        </div>
+        <div id="filter-buttons" class="simple-row wrap"></div>
+      </section>
+
+      <section id="posts" class="stack-md"></section>
+    </main>
+
+    <script src="./js/config.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
+

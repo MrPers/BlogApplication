@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="shell simple-row">
+      <div>
+        <p class="eyebrow">Dashboard</p>
+        <h1>Manage Your Posts</h1>
+      </div>
+      <nav class="simple-row nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./auth.html">Account</a>
+        <button id="logout-button" class="text-button" type="button">Logout</button>
+      </nav>
+    </header>
+
+    <main class="shell dashboard-layout">
+      <section class="panel stack-md">
+        <div class="simple-row wrap space-between">
+          <h2 id="form-title">Create Post</h2>
+          <button id="cancel-edit" class="secondary hidden" type="button">Cancel edit</button>
+        </div>
+        <form id="post-form" class="stack-md">
+          <input name="title" placeholder="Post title" required />
+          <input name="category" placeholder="Category" required />
+          <textarea name="content" rows="8" placeholder="Write your post here" required></textarea>
+          <button type="submit">Save post</button>
+        </form>
+      </section>
+
+      <section class="panel stack-md">
+        <div>
+          <h2>My posts</h2>
+          <p class="muted">Edit or delete only the posts you created.</p>
+        </div>
+        <section id="my-posts" class="stack-md"></section>
+      </section>
+    </main>
+
+    <p id="dashboard-message" class="shell feedback"></p>
+    <script src="./js/config.js"></script>
+    <script type="module" src="./js/dashboard.js"></script>
+  </body>
+</html>
+

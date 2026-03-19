@@ -1,5 +1,3 @@
-## Backend Project
-
 ### Stack
 
 - Node.js
@@ -10,6 +8,10 @@
 - cors
 - bcrypt
 - jsonwebtoken
+- HTML
+- CSS
+- JavaScript
+- Fetch API
 
 ### Backend Features
 
@@ -28,8 +30,6 @@ After `backend/npm run seed`:
 - `anton@example.com` / `password123`
 - `maria@example.com` / `password123`
 
-
 ## Submission Links
 
-- **Frontend URL:** `https://blogapplicationfront-end-lzmn.onrender.com`
-- **Backend URL:** `https://blogapplicationback-end.onrender.com/`
+- **URL:** `https://blogapplication.onrender.com/`

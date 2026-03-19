@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config({ quiet: true });
@@ -6,6 +7,7 @@ const userRoutes = require('./routes/users');
 const postRoutes = require('./routes/posts');
 
 const app = express();
+
 const allowedOrigins = (process.env.CLIENT_ORIGIN || '')
   .split(',')
   .map((origin) => origin.trim())
@@ -22,6 +24,7 @@ app.use(
     },
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -34,6 +37,13 @@ app.use('/api/posts', postRoutes);
 
 app.use('/api', (req, res) => {
   res.status(404).json({ message: 'API route not found.' });
+});
+
+const publicDir = path.join(__dirname, '../client');
+app.use(express.static(publicDir));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicDir, 'index.html'));
 });
 
 app.use((error, req, res, next) => {
